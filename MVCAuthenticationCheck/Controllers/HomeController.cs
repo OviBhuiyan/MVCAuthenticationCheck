@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MVCAuthenticationCheck.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BASEController
     {
         public ActionResult Index()
         {
@@ -20,11 +20,19 @@ namespace MVCAuthenticationCheck.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Contact() //
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
+
+        public ActionResult Anonymous() //
+        {
+            ViewBag.Message = "Your Anonymous page.";
+
+            return View();
+        }
+
     }
 }
